@@ -1,15 +1,4 @@
 # sample_two.tf
-
-variable "input" {
-  type    = number
-  default = 0
-
-  validation {
-    condition     = var.input >= 0
-    error_message = "input should be positive"
-  }
-}
-
 resource "tfcoremock_simple_resource" "resource" {
   number = var.input + 1
 
